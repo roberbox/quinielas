@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "roboto-black";
+    src: url("../fonts/roboto/Roboto-Black.woff2") format("woff2"),
+         url("../fonts/roboto/Roboto-Black.woff") format("woff"),
+}
+
+@font-face {
+    font-family: "roboto-light";
+    src: url("../fonts/roboto/Roboto-Light.woff2") format("woff2"),
+         url("../fonts/roboto/Roboto-Light.woff") format("woff"),
+}
+
+.main-button {
+    color: #DCFF04;
+    border: #DCFF04 1px solid;
+    padding: 16px;
+    width: 200px;
+    border-radius: 30px;
+    background: transparent;
+    outline: none;
+    opacity: .5;
+    transition: 0.5s;
+        &:hover {
+            // transition: ;
+            box-shadow: 1px 4px 5px black;
+            opacity: 1;
+        }
+
+}
+
