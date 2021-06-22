@@ -1,5 +1,5 @@
 .Background {
-    background: url('../../common/Image/HomeImage/background.svg') no-repeat fixed center;
+    background: url('../../common/Image/HomeImage/background.webp') no-repeat fixed center;
     background-size: cover;
     height: 100vh;
     min-height: 600px;
@@ -16,8 +16,7 @@
             .Description-container {
                 display: flex;
                 justify-content: center;
-                align-items: center;
-           
+                align-items: center;   
                 .Description  {
                     color: white;
                     display: grid;
@@ -44,10 +43,20 @@
                         align-self: center;
                         justify-self: center;
                     }
-    
                 }
             }            
-    
+            .registration-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .form-container {
+                    display: grid;
+                    background: white;
+                    width: 500px;
+                    height: 500px;
+                  
+                }
+            }    
         }   
     
     }
