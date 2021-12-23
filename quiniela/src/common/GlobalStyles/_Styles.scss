@@ -10,18 +10,79 @@
          url("../fonts/roboto/Roboto-Light.woff") format("woff"),
 }
 
+@font-face {
+    font-family: "roboto-regular";
+    src: url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"),
+         url("../fonts/roboto/Roboto-Regular.woff") format("woff"),
+}
+
+// variables
+$main-green:#3D9F00;
+// variables
+
+body {
+    font-family: roboto-regular;
+}
+// Dynamic layout for responsive
+$size-xl: 1920px;
+$size-lg: 1440px;
+$size-md: 1024px;
+$size-sm: 767px;
+$size-xs: 480px;
+$size-xxs: 320px;
+
+@mixin media-xl {
+    @media (max-width: $size-xl) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media (max-width: $size-lg) {
+        @content;
+    }
+}
+@mixin media-md {
+    @media (max-width: $size-md) {
+        @content;
+    }
+}
+@mixin media-sm-landscape {
+    @media (max-width: $size-sm) and (orientation: landscape) {
+        @content;
+    }
+}
+@mixin media-sm {
+    @media (max-width: $size-sm) {
+        @content;
+    }
+}
+@mixin media-xs {
+    @media (max-width: $size-xs) {
+        @content;
+    }
+}
+
+@mixin media-xxs {
+    @media (max-width: $size-xxs) {
+        @content;
+    }
+}
+
+// Dynamic layout for responsive
+  
 .main-button {
-    color: #DCFF04;
-    border: #DCFF04 1px solid;
+    color: $main-green;
+    border: $main-green 1px solid;
     padding: 16px;
     width: 200px;
     border-radius: 30px;
     background: transparent;
     outline: none;
-    opacity: .5;
-    transition: 0.5s;
+    opacity: .6;
+    transition: 0.3s;
+    font-weight: 900;
         &:hover {
-            box-shadow: 1px 4px 5px black;
+            box-shadow: 1px 3px 8px black;
             opacity: 1;
         }
 

@@ -1,0 +1,69 @@
+//comprobar que sep mande .01 en las transacciones
+arrayOriginal.map(element => {   
+  // console.log("monto validacion", element.Monto !== ".01");
+  // console.log('Rastreo ',  element.Rastreo[0] !== 'X');
+  console.log('hola');
+  ( element.Rastreo[0] !== 'X' && element.Monto !== ".01") && console.log(element);
+})
+//---------------------------------------------
+
+
+
+
+
+
+//comparacion de sep y BO
+
+loginClick = () => {
+  console.log('hola');
+  //comprobar que sep mande .01 en las transacciones
+ 
+  const arrayOriginal = []
+
+  const arrayXXXpush = [
+  ]
+
+  const stpArray = [
+
+  ]
+
+  const arrayNoMatches = [
+
+  ]
+
+  arrayOriginal.map(arrayElement => {
+    arrayElement.Rastreo[0] === 'X' && arrayXXXpush.push(arrayElement.Rastreo)
+  })
+
+  arrayXXXpush.map(xxxelement => {
+    xxxelement.split("X", 0);
+    const withoutX = xxxelement.slice(8, 14)
+    stpArray.map(stpElement => {
+      stpElement.Rastreo !== withoutX && arrayNoMatches.push(stpElement)
+    })
+  })
+  console.log('no matches',arrayNoMatches);
+  this.setState({array : arrayNoMatches})
+}
+
+
+
+
+loginClick = () => {
+  console.log('hola');
+  //frozen to active
+const ArrayBO = Json
+
+ const ArrayFiltrado = []
+
+ ArrayBO.map(element => {
+  // "Valuebefore": "frozen",
+  // "Valueafter": "active",
+  (element.Valuebefore === "active" && element.Valueafter === "frozen") && ArrayFiltrado.push(element)
+
+ })
+ArrayFiltrado.map(element =>{
+ console.log(element);
+} )
+
+this.setState({array: ArrayFiltrado})

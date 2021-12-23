@@ -3,10 +3,7 @@ import Logo from '../common/Image/HomeImage/logo.svg'
 import Login from './components/login'
 import RegistrationForm from './components/registrationForm'
 import ExportExcel from 'react-export-excel'
-import Json from '../Json/David/david.json'
-import Pueba from '../Json/frozenToActive/frozenToActive.json'
-import BackPayments  from '../Json/Mayo/backpayments.json'
-import Retiros from '../Json/Mayo/retiros.json'
+
 
 
 
@@ -22,14 +19,7 @@ class index extends Component {
     };
 
     loginClick = () => {
-      const array = [3, 15]
 
-      array.map(element => {
-          for (let index = 1; index <= element; index++) {
-            
-            (index %3 === 0 && index %5 === 0) ? console.log('FizzBuzz') : index %5 === 0 ? console.log('Buzz') : index %3 === 0 ? console.log('Fizz')  : console.log(index);            
-          }
-      })
     }
 
 
@@ -37,15 +27,21 @@ class index extends Component {
       // console.log('render',this.state.array);
         return (
             <Fragment>
-                <div class="Background">
+                <div className="Background">
                     <div className="BackgroundColor">
                         <div className="GridContainer">
+                          <div className='Description-container '>
                             <Login 
                                 logo={Logo}
                                 loginClick={this.loginClick} 
-                            /> 
+                            />
+                          </div>
+                          <div className='registration-container'>
+                            <RegistrationForm 
+                            
+                            />
+                          </div>
                         </div>
-                      <input></input>
                     </div>
                 </div>
             </Fragment>
